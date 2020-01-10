@@ -1,6 +1,6 @@
 Name:           perl-Test-Memory-Cycle
 Version:        1.04
-Release:        7.1%{?dist}
+Release:        8%{?dist}
 Summary:        Check for memory leaks and circular memory references
 
 Group:          Development/Libraries
@@ -10,6 +10,7 @@ Source0:        http://www.cpan.org/authors/id/P/PE/PETDANCE/Test-Memory-Cycle-%
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 
 BuildArch:      noarch
+BuildRequires:  perl(CGI)
 BuildRequires:  perl(Devel::Cycle) >= 1.07
 BuildRequires:  perl(PadWalker)
 BuildRequires:  perl(Test::Builder::Tester)
@@ -59,6 +60,10 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Tue May  7 2013 Marcela Mašláňová <mmaslano@redhat.com> - 1.04-8
+- add missing BR
+- Resolves: rhbz#621089
+
 * Mon Apr 26 2010 Dennis Gregorovic <dgregor@redhat.com> - 1.04-7.1
 - Rebuilt for RHEL 6
 Related: rhbz#566527
