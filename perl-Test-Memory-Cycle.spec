@@ -1,6 +1,6 @@
 Name:           perl-Test-Memory-Cycle
 Version:        1.04
-Release:        16%{?dist}
+Release:        17%{?dist}
 Summary:        Check for memory leaks and circular memory references
 
 Group:          Development/Libraries
@@ -65,6 +65,9 @@ rm -rf $RPM_BUILD_ROOT
 
 
 %changelog
+* Fri Dec 27 2013 Daniel Mach <dmach@redhat.com> - 1.04-17
+- Mass rebuild 2013-12-27
+
 * Tue Oct 23 2012 Jitka Plesnikova <jplesnik@redhat.com> - 1.04-16
 - Specify all dependencies.
 
